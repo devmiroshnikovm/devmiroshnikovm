@@ -1,0 +1,38 @@
+div {
+  border: 1px solid red;
+}
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.page__heading {
+  display: flex;
+  color: #2f80ed;
+  height: calc(100vh / 2);
+
+  align-items: flex-end;
+
+  font-size: 18px;
+  margin-bottom: 50px;
+}
+
+.page__wrap-buttons-block {
+  display: flex;
+  align-items: baseline;
+}
+.page__answer-yes_visibility_hidden {
+  display: flex;
+  color: #2f80ed;
+  margin-top: 20px;
+  display: none;
+}
+
+.page__answer-no_visibility_hidden {
+  display: flex;
+  color: #2f80ed;
+  margin-top: 20px;
+  display: none;
+}
