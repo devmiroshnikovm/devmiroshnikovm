@@ -1,0 +1,16 @@
+.footer {
+  /* сбрасываем отступы */
+  margin: 0;
+  padding: 0;
+  /* add intents */
+  padding-top: 60px;
+  padding-bottom: 40px;
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  min-height: 350px;
+  background-color: #1f1f1f;
+  color: white;
+}

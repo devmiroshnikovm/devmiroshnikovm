@@ -1,0 +1,9 @@
+.khan__author {
+  /* обнуляем отступы у текстового элемента */
+  margin: 0;
+  padding: 0;
+
+  line-height: 42px;
+  font-size: 30px;
+  font-weight: normal;
+}

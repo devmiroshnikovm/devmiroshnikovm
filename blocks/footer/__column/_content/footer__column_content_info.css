@@ -1,0 +1,4 @@
+/* element columns модификатор content значение модификатора info */
+.footer__column_content_info {
+  justify-content: baseline;
+}

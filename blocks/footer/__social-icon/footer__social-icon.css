@@ -1,0 +1,9 @@
+/* element social-icon */
+.footer__social-icon {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 16px;
+  width: 16px;
+  margin-right: 10px;
+}

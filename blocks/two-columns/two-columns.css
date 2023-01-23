@@ -1,0 +1,10 @@
+.two-columns {
+  /* сбрасываем отступы */
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 80%;
+}

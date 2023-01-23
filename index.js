@@ -1,59 +1,39 @@
-// Get the element with the id "answer_yes"
-var button = document.getElementById("answer_yes");
+const { Console } = require("console");
+const fs = require("fs");
+const path = require("path");
 
-// Check if the element exists
-if (button) {
-  // Add a click event listener to the button
-  button.addEventListener("click", function () {
-    // Your code goes here
+let arrSemanticDivd = ["<p", "<h1", "<h2", "<h3", "<h4", "<span", "<ul", "<ol"];
+const allFileContents = fs.readFileSync("./index.html", "utf-8");
+let count = 0;
 
-    hiddenDivs_yes = document.getElementsByClassName(
-      "page__answer-yes_visibility_hidden"
-    );
-    first_yes = hiddenDivs_yes[0];
-    first_yes.style.display = "flex";
+function parse(_expression) {
+  let regex = /class="(.*?)"/;
+  let arr = [];
+  let uniqueArr = [];
 
-    hiddenDivs_no = document.getElementsByClassName(
-      "page__answer-no_visibility_hidden"
-    );
-    first_no = hiddenDivs_no[0];
-    first_no.style.display = "none";
+  allFileContents.split(/\r?\n/).forEach((line) => {
+    if (line.includes(_expression)) {
+      let match = line.match(regex);
+      arr.push(match[1]);
+    }
   });
-} else {
-  // The element does not exist
-  console.error('Element with id "answer_yes" not found');
+  uniqueArr = [...new Set(arr)];
+  count = count + uniqueArr.length;
+  //console.log(_expression, " ", uniqueArr);
+  return uniqueArr;
 }
 
-// Get the element with the id "answer_yes"
-var button = document.getElementById("answer_no");
+console.log(arrSemanticDivd);
 
-let answers = [
-  "может !no ;)?",
-  "подумай еще раз",
-  "где таких парней еще найдешь?",
-  "такой ответ не предусмотрен, попробуй еще раз",
-];
-// Check if the element exists
-if (button) {
-  // Add a click event listener to the button
-  button.addEventListener("click", function () {
-    // Your code goes here
+let arr = [];
 
-    hiddenDivs_yes = document.getElementsByClassName(
-      "page__answer-yes_visibility_hidden"
-    );
-    first_yes = hiddenDivs_yes[0];
-    first_yes.style.display = "none";
+arrSemanticDivd.forEach((element) => {
+  let el = parse(element);
+  arr.push(el);
+  console.log(element, el);
+});
+console.log("блоков обновить ", count);
 
-    hiddenDivs_no = document.getElementsByClassName(
-      "page__answer-no_visibility_hidden"
-    );
-    first_no = hiddenDivs_no[0];
-    first_no.style.display = "flex";
-    let index = Math.floor(Math.random() * answers.length);
-    first_no.textContent = answers[index];
-  });
-} else {
-  // The element does not exist
-  console.error('Element with id "answer_yes" not found');
-}
+let str = arr.flat(Infinity).join().replace(/,/g, " ");
+let newArr = [...new Set(str.split(" "))]; // удалить дубликаты
+//console.log(newArr, "unique blocks need to change: ", newArr.length);

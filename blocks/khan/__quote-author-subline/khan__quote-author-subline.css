@@ -1,0 +1,11 @@
+.khan__quote-author-subline {
+  /* обнуляем отступы у текстового элемента */
+  margin: 0;
+  padding: 0;
+
+  line-height: 1.15;
+  font-size: 24px;
+  font-weight: normal;
+  margin-top: 10px;
+  margin-bottom: 68px;
+}

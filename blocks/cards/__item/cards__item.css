@@ -1,0 +1,12 @@
+.cards__item {
+  display: flex;
+  flex-direction: column;
+  margin-top: 60px;
+  margin-right: 100px;
+  max-width: 240px;
+}
+
+/* обнуляем каждый третий элемент - 3n */
+.cards__item:nth-child(3n) {
+  margin-right: 0;
+}
