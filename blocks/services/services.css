@@ -1,0 +1,23 @@
+div {
+  outline: auto red;
+}
+.services {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.service {
+  width: 290px;
+  height: 200px;
+  background-color: rgb(113, 168, 81);
+}
+
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+}
+.proj {
+  width: 290px;
+  height: 200px;
+  background-color: rgb(229, 226, 21);
+}

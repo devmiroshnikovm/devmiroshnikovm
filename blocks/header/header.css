@@ -1,18 +1,5 @@
 .header {
-  /* сбрасываем отступы */
-  margin: 0;
-  padding: 0;
-
-  height: 100vh;
-  min-height: 600px;
-  max-height: 756px;
-  /* выше установили ограничения для секции */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  /* for possition child elements not on browser windows but on parent div */
-  position: relative;
-  background-color: #f2f2f2;
-  overflow: hidden;
-  z-index: 1;
+  width: 1200px;
+  height: 200px;
+  background-color: aliceblue;
 }

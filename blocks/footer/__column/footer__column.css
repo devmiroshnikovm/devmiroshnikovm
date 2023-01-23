@@ -1,6 +1,0 @@
-/* element column */
-.footer__column {
-  /* тут должны быть общие свойства для столбца */
-  display: flex;
-  flex-direction: column;
-}
