@@ -4,10 +4,12 @@ div {
 .services {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
 }
-
 .service {
-  width: 290px;
+  width: 25%;
   height: 200px;
   background-color: rgb(113, 168, 81);
 }
@@ -15,9 +17,12 @@ div {
 .projects {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
 }
 .proj {
-  width: 290px;
+  width: 33.3%;
   height: 200px;
   background-color: rgb(229, 226, 21);
 }
