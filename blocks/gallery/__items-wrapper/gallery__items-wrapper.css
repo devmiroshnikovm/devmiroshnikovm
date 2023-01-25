@@ -1,0 +1,12 @@
+.gallery__items-wrapper {
+  margin-left: 48px;
+  margin-right: 48px;
+
+  display: grid;
+  grid-template-columns: repeat(4, 284px);
+  grid-template-rows: 213px;
+  grid-auto-flow: row;
+
+  row-gap: 16px;
+  column-gap: 16px;
+}
